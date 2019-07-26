@@ -14,11 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 
-@MultipartConfig(
-        location = "C:\\attaches",
-        maxFileSize = -1,
-        maxRequestSize = -1,
-        fileSizeThreshold = 1024)
+//@MultipartConfig(
+//        location = "C:\\attaches",
+//        maxFileSize = -1,
+//        maxRequestSize = -1,
+//        fileSizeThreshold = 1024)
 @WebServlet("/fileUpload")
 public class FileUploadServlet extends HttpServlet {
 
