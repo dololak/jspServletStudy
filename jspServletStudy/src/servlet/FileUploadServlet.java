@@ -19,7 +19,7 @@ import javax.servlet.http.Part;
 //        maxFileSize = -1,
 //        maxRequestSize = -1,
 //        fileSizeThreshold = 1024)
-@WebServlet("/fileUpload")
+//@WebServlet("/fileUpload")
 public class FileUploadServlet extends HttpServlet {
 
     private static final String CHARSET = "utf-8";
@@ -66,7 +66,7 @@ public class FileUploadServlet extends HttpServlet {
     private String extractFileName(String partHeader) {
         for (String cd : partHeader.split(";")) {
             if (cd.trim().startsWith("filename")) {
-                String fileName = cd.substring(cd.indexOf("=") + 1).trim().replace("\"", "");;
+                String fileName = cd.substring(cd.indexOf("=") + 1).trim().replace("\"", "");
                 int index = fileName.lastIndexOf(File.separator);
                 return fileName.substring(index + 1);
             }
