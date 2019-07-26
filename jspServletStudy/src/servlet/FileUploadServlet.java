@@ -53,7 +53,7 @@ public class FileUploadServlet extends HttpServlet {
 
                 } else {
                     String formValue = request.getParameter(part.getName());
-                    System.out.printf("name : %s, value : %s <br> \n", part.getName(), formValue);
+                    System.out.printf("name : %s, value : %s \n", part.getName(), formValue);
                 }
             }
             
