@@ -53,9 +53,11 @@ public class FileUploadServlet extends HttpServlet {
 
                 } else {
                     String formValue = request.getParameter(part.getName());
-                    out.printf("name : %s, value : %s <br> \n", part.getName(), formValue);
+                    System.out.printf("name : %s, value : %s <br> \n", part.getName(), formValue);
                 }
             }
+            
+            out.println("<h1>업로드 완료</h1>");
         } else {
             out.println("<h1>enctype이 multipart/form-data가 아님</h1>");
         }
