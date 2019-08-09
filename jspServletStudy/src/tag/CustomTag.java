@@ -3,9 +3,10 @@ package tag;
 import java.io.IOException;
 import java.io.StringWriter;
 
-import javax.servlet.jsp.JspContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class CustomTag extends SimpleTagSupport{
@@ -18,7 +19,12 @@ public class CustomTag extends SimpleTagSupport{
     @Override
     public void doTag() throws JspException, IOException {
         //JspContext는 이 태그를 사용한 JSP 페이지에 대한 정보를 담고 있다.  
-        JspContext context = this.getJspContext();
+        PageContext context = (PageContext)this.getJspContext();
+        
+        //태그가 호출된 JSP에 대해 요청 정보를 가져온다.
+        HttpServletRequest request = (HttpServletRequest)context.getRequest();
+        System.out.println("태그가 호출된 JSP URI : " + request.getRequestURI());
+        
         
         //Jsp 페이지의 결과를 브라우저로 출력할 출력스트림를 얻는다.
         //JSP의 out 객체와 같음.
