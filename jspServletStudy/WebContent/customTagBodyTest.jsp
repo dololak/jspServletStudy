@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="dololak" uri="http://customTag.com" %>
+<%@ taglib prefix="dololak" uri="http://customTagBody.com" %>
 
 <html>
 <head>
@@ -8,10 +8,9 @@
 </head>
 <body>
 
-<dololak:toSpan>hello</dololak:toSpan>
-    
-<br>
-태그 테스트 완료!!!
+<dololak:toSpan color="blueviolet" iterNum="5">
+    hello
+</dololak:toSpan>
 
 </body>
 </html>
