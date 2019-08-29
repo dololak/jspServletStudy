@@ -8,17 +8,5 @@
     <name>toSpan</name>
     <tag-class>tag.CustomTag</tag-class>
     <body-content>JSP</body-content>
-    <attribute>
-        <name>color</name>
-        <required>true</required>
-        <rtexprvalue>true</rtexprvalue>
-        <type>java.lang.String</type>
-    </attribute>
-    <attribute>
-        <name>iterNum</name>
-        <required>true</required>
-        <rtexprvalue>true</rtexprvalue>
-        <type>java.lang.Integer</type>
-    </attribute>
   </tag>
 </taglib>

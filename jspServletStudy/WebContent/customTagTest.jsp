@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<dololak:toSpan color="blueviolet" iterNum="5">
+<dololak:toSpan>
     hello
 </dololak:toSpan>
     
